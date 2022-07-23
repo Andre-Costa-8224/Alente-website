@@ -28,7 +28,7 @@ const SobreNos = () => {
 	  <article className="ondetudocomecou">
 	    <h1>Onde tudo começou</h1>
 	    <p>O Instituto Alente inicialmente nasceu de uma necessidade do banco de leite em diversas regiões de pernambuco, principalmente no Recife, onde foi detectado uma grande escacez de leite materno para bebés prematuros, mães impossibilitadas de amamentar, puerperias e afins. Com isso,</p>
-	    <Link className="linkhistoria" to="/nossahistoria">Saiba mais <img src="https://cdn-icons.flaticon.com/png/512/3634/premium/3634202.png?token=exp=1656722224~hmac=7c5bdb3a940c4e9f10eb4217b006bcbd" alt="seta"/></Link>
+	    <Link className="linkhistoria" to="/historiadeinicio">Saiba mais <img src="https://cdn-icons.flaticon.com/png/512/3634/premium/3634202.png?token=exp=1656722224~hmac=7c5bdb3a940c4e9f10eb4217b006bcbd" alt="seta"/></Link>
 	  </article>
 	</section>
       </main>

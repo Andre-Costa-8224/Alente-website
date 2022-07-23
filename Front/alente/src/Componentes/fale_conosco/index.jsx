@@ -5,11 +5,9 @@ import {useState} from "react"
 
 const FaleConosco = (props) => {
   
-  const [show, setShow] = useState(false);
-  
-  const handleClose = () => {setShow(false)};
-
-  const handleShow = () => {setShow(true)};
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return(
       <>
@@ -40,14 +38,13 @@ const FaleConosco = (props) => {
                 <label className="termoseconds"><a href="#">Aceito termos e condições</a></label>
               </div>
               <div>
-                <input type="button" value="Enviar" className="btnenviar" onClick={() => handleShow()} />
+                <input type="button" value="Enviar" className="btnenviar" onClick={() => handleOpen()} />
               </div>
             </div>
           </form>
-	{show ? (<ModalContato show={true} handleClose={handleClose}/>) : ("")}/>
+	{open ? (<ModalContato handleOpen={true} handleClose={handleClose}/>) : ("")}
       </section>
-        <section className="imagem">
-      </section>
+        <section className="imagem"></section>
     </main>
   </>
 )
