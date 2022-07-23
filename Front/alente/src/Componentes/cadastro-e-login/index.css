@@ -1,0 +1,108 @@
+.formlog {
+  margin: 20px auto 15px auto;
+}
+.formlog form h1 {
+  text-align: center;
+}
+
+.formlog form div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formlog form div span input{
+  width: 21px;
+  height: 21px;
+}
+
+.formlog form div span a{
+  text-decoration: none;
+}
+
+.formlog div {
+  text-align: center;
+}
+
+#logexterno{
+  margin-top: 15px;
+}
+
+#logexterno a{
+  padding: 7px;
+  border: 1px solid grey;
+  text-decoration: none;
+  color: lightgrey;
+  font-weight: bold;
+  transition: 1s;
+  border-radius: 4px;
+}
+
+#logexterno a svg{
+  color: black;
+  margin-right: 9px;
+}
+
+#logexterno a:hover{
+  text-decoration: underline;
+  color: gray;
+}
+
+#submit {
+  padding: 6px 10px 6px 10px;
+  font-size: large;
+  background-color: #C48485;
+  border: 2px solid #D48E8F;
+  border-radius: 7px;
+}
+
+/*-----AREA DO COMPONENTE CADASTRO-----*/
+
+.cadpage{
+  display: flex;
+  justify-content: space-around;
+  background-image: url(../../Imagens/IMG-20220702-WA0003.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+}
+
+.cadpage section{
+  max-width: 50vw;
+  margin: 8vh auto auto auto;
+}
+
+.txtarea{
+  max-inline-size: 245px;
+}
+
+.termoseconds{
+  margin: -15px auto auto 12px;
+}
+ 
+.cadpage section article p{
+  padding: 12px;
+}
+
+.formcad{
+  margin-top: 30px;
+  max-width: 50vw;
+  background-color: white;
+  padding: 30px;
+  border-radius: 7px;
+  margin: auto;
+}
+
+.birthinput{
+  max-inline-size: 245px;
+}
+
+@media (max-width: 580px){
+  .cadpage{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .formcad{
+    max-width: 80vw;
+  }
+}
