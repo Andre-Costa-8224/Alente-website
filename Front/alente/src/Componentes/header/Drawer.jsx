@@ -12,7 +12,7 @@ const DrawerComp = () => {
   return(
 
     <>
-      <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
+      <Drawer anchor="right" open={openDrawer} onClose={() => setOpenDrawer(false)}>
 	<List sx={{display: "flex", flexDirection: "column"}}>
 	  {
 	    pagesList.map((page, index) => (<Link to={destination[index]}><ListItemButton><ListItemIcon><ListItemText>{page}</ListItemText></ListItemIcon></ListItemButton></Link>))

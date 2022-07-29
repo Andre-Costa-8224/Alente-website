@@ -8,14 +8,12 @@ import {
   AppBar, 
   Toolbar, 
   Typography,
-  Button,
   Tab,
   Tabs,
   useMediaQuery,
   useTheme,
   Menu,
   MenuItem,
-  MenuIcon,
   IconButton
 } from '@mui/material';
 
@@ -31,12 +29,7 @@ const Cabecalho = () => {
 
   //-----------
 
-  const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleChange = (event) => {
-    setAuth(event.target.checked);
-  };
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
