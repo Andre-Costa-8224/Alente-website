@@ -1,4 +1,5 @@
-import "./index.css"
+import "./index.css";
+import {Link} from "react-router-dom";
 
 const Carrossel = () => {
 
@@ -7,20 +8,20 @@ const Carrossel = () => {
 	<div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <div className="d-block bebe1 alturaimg w-100"><p>JUNTOS SOMOS MAIS FORTES!<br/><span>Entenda como nós funcionamos →</span></p></div>
+      <div className="d-block bebe1 alturaimg w-100"><p>JUNTOS SOMOS MAIS FORTES!<br/><Link to="/comofunciona" className="linkcarousel">Entenda como nós funcionamos →</Link></p></div>
     </div>
     <div className="carousel-item">
-      <div className="d-block bebe2 alturaimg w-100"><p>PROGRAMAS DE ATENDIMENTO<br/><span>Saiba mais →</span></p></div>
+      <div className="d-block bebe2 alturaimg w-100"><p>PROGRAMAS DE ATENDIMENTO<br/><Link to="/programas" className="linkcarousel">Saiba mais →</Link></p></div>
     </div>
     <div className="carousel-item">
       <div className="imagemcarousel">
-        <div className="d-block marcalogoseio alturaimg w-50"><p>DOAÇÃO DE LEITE<br/><span>Saiba mais →</span></p></div>
+        <div className="d-block marcalogoseio alturaimg w-50"><p>DOAÇÃO DE LEITE<br/><Link to="/doacoes" className="linkcarousel">Saiba mais →</Link></p></div>
         <div className="d-block maeamamentando w-50 alturaimg"></div>
       </div>
     </div>
     <div className="carousel-item">
       <div className="imagemcarousel">
-	<div className="d-block marcalogoseio alturaimg w-50"><p>ENTRE PARA A FAMÍLIA ALENTE<br/><span>Saiba mais →</span></p></div>
+	<div className="d-block marcalogoseio alturaimg w-50"><p>ENTRE PARA A FAMÍLIA ALENTE<br/><Link to="/cadastro" className="linkcarousel">Saiba mais →</Link></p></div>
 	<div className="d-block w-50 bebesegurandodedo alturaimg"></div>
       </div>
     </div>
