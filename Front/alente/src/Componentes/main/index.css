@@ -1,0 +1,100 @@
+.imagemcarousel{
+  display: flex;
+  flex-direction: row;
+}
+
+.alturaimg{
+  height: 50vh;
+}
+
+.bebe1{
+  background-image: url("../../Imagens/bebemamando-carousel-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bebe1 p{
+  padding-top: 65%;
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.bebe1 p span{
+  font-size: 1.5rem;
+}
+
+.bebe2{
+  background-image: url("../../Imagens/bebemamando-carousel-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bebe2 p{
+  padding-top: 65%;
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.bebe2 p span{
+  font-size: 1.5rem;
+}
+
+.marcalogoseio{
+  background-image: url("../../Imagens/MARCA-ALENTE-1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.marcalogoseio p{
+  line-height: 250%;
+  padding-top: 70%;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.marcalogoseio p span{
+  font-size: 1.5rem;
+}
+
+.maeamamentando{
+  background-image: url("../../Imagens/maeamamentando-carousel.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bebesegurandodedo{
+  background-image: url("../../Imagens/bebesegurandodedo.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* MEDIA QUERY - CAROUSEL VERSÃO MOBILE*/
+
+@media (max-width: 600px){
+  .bebe1 p{
+    font-size: 1.3rem;
+  }
+
+  .bebe1 p span{
+    font-size: 1rem;
+  }
+  
+  .bebe2 p{
+    font-size: 1.3rem;
+  }
+  
+  .bebe2 p span{
+    font-size: 1rem;
+  }
+  
+  .marcalogoseio p{
+    font-size: 1.3rem;
+  }
+ 
+  .marcalogoseio p span{
+    font-size: 1rem;
+  }
+}
