@@ -1,5 +1,11 @@
 import "./index.css";
 import {Link} from "react-router-dom";
+import mari from "../../Imagens/mari.jpg";
+import renata from "../../Imagens/renata.jpg";
+import seashells from "../../Imagens/logosasells.png";
+import descartex from "../../Imagens/logodescartex.png";
+import energia from "../../Imagens/logoenergiapopulardobrasil.png";
+import sir from "../../Imagens/logosirinvestimentos.png";
 
 const Carrossel = () => {
 
@@ -15,14 +21,19 @@ const Carrossel = () => {
     </div>
     <div className="carousel-item">
       <div className="imagemcarousel">
-        <div className="d-block marcalogoseio alturaimg w-50"><p>DOAÇÃO DE LEITE<br/><Link to="/doacoes" className="linkcarousel">Saiba mais →</Link></p></div>
+        <div className="d-block marcalogoseio alturaimg w-50"><p className="marcalogoseiotxt">DOAÇÃO DE LEITE<br/><Link to="/doacoes" className="linkcarousel">Saiba mais →</Link></p></div>
         <div className="d-block maeamamentando w-50 alturaimg"></div>
       </div>
     </div>
     <div className="carousel-item">
       <div className="imagemcarousel">
-	<div className="d-block marcalogoseio alturaimg w-50"><p>ENTRE PARA A FAMÍLIA ALENTE<br/><Link to="/cadastro" className="linkcarousel">Saiba mais →</Link></p></div>
+	<div className="d-block marcalogoseio alturaimg w-50"><p className="marcalogoseiotxt">ENTRE PARA A FAMÍLIA ALENTE<br/><Link to="/cadastro" className="linkcarousel">Saiba mais →</Link></p></div>
 	<div className="d-block w-50 bebesegurandodedo alturaimg"></div>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <div className="imagemcarousel">
+	<div className="d-block marcalogoseio w-100 alturaimg"><p className="marcalogoseio-title">Idealizadoras do projeto</p><div className="marcalogoseio-mari-renata"><img src={mari} className="Mari" alt="Mari"/><img src={renata} alt="Renata"/></div><p className="marcalogoseio-mari-renata"><span className="Mari">Mari</span><span id="renata">Renata</span></p><p className="imglogostitle">Parceiros que confiam na gente</p><div className="imglogos"><img src={seashells} id="seashells" alt="seashells"/><img src={descartex} style={{marginLeft: "4%"}} alt="descartex"/><img src={energia} style={{marginLeft: "4%"}} alt="energia popular do Brasil"/><img src={sir} style={{marginLeft: "4%"}} alt="Sir investimentos"/></div></div>
       </div>
     </div>
   </div>
