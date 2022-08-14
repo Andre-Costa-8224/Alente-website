@@ -9,3 +9,17 @@ PALETA DE CORES:
 .altura{
   min-height: 50vh;
 }
+
+.btntomrosaescuro{
+  background-color: #B58281;
+  color: white;
+}
+
+.backgroundamarelado{
+  background-color: #F4EED8;
+  color: #B58281;
+}
+
+.fontetomrosaescuro{
+  color: #B58281;
+}

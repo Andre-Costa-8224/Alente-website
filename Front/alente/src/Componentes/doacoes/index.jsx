@@ -1,6 +1,12 @@
 import "./index.css";
+import ModalInf from "./Modal";
+import {useState} from "react";
 
 const Doacoes = () => {
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   
   return(
     <>
@@ -64,10 +70,11 @@ const Doacoes = () => {
 	    </div>
 	    <br/>
 	    <div className="doar">
-	      <input type="button" className="btn" value="Doar"/>
+	      <input type="button" className="btn" onClick={() => handleOpen()}  value="Doar"/>
 	    </div>
 	  </form>
 	</article>
+	{ handleOpen ? <ModalInf open={open} handleClose={handleClose}/> : ""}
       </section>
     </>
   )

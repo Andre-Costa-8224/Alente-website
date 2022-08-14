@@ -65,6 +65,13 @@
   padding-right: 6%;
 }
 
+#acompanhardoacoeslink{
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  padding: 6px;
+}
+
 /*INPUT RADIO ESTILIZAÇÃO*/
 
 #input-option {
