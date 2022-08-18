@@ -20,11 +20,11 @@ const Rodape = () => {
 		    <Link className="link" to="/faleconosco">Fale Conosco</Link>
 		</div>
 		<div>
-		    <Link className="link" to="/">Seja nosso parceiro</Link>
-		    <Link className="link" to="/">Doe leite</Link>
+		    <Link className="link" to="/parceiros">Seja nosso parceiro</Link>
+		    <Link className="link" to="/doeleite">Doe leite</Link>
 		    <Link className="link" to="/login">Entrar</Link>
 		    <Link className="link" to="/cadastro">Cadastrar</Link>
-		    <Link className="link" to="/">Transparência</Link>
+		    <Link className="link" to="/transparencia">Transparência</Link>
 		</div>
 		<div>
 		    <Link className="link" id="doacaolink" to="/">Faça uma doação financeira</Link>

@@ -1,7 +1,14 @@
 import {Link} from "react-router-dom";
 import "./index.css";
+import ModalInf from "./Modal";
+import {useState} from "react";
 
 const Parceiros = () => {
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return(
       <div id="divparceiros">
 	<section id="txtparceiros">
@@ -21,9 +28,10 @@ const Parceiros = () => {
 	    <label><input type="text" placeholder="Endereço"/></label>
 	    <label><input type="number" placeholder="CNPJ"/></label>
 	    <label><input type="checkbox"/><span>Aceito </span><a href="">Termos e condições</a></label>
-	    <div id="botaoenviar"><input value="ENVIAR" type="button"/></div>
+	    <div id="botaoenviar"><input onClick={() => handleOpen()} className="btn fontetomrosaescuro" value="ENVIAR" type="button"/></div>
 	  </form>
 	</section>
+	{ open ? <ModalInf open={open} handleClose={handleClose}/> : "" }
       </div>
   )
 }
