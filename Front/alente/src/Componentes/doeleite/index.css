@@ -1,1 +1,32 @@
+#textodeapoio{
+  max-height: 50vh;
+}
 
+#imagemdefundo{
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  background-image: url(../../Imagens/potesdeleite.jpg);
+  min-height: 30vh;
+  background-size: 230% 230%;
+  background-position: 37% 35%;
+}
+
+#imagemdefundo button{
+  margin: auto 2% 2% auto;
+}
+
+.form-modal fieldset{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-modal fieldset div{
+  max-width: 50%;
+  margin: 3% auto auto auto;
+}
+
+.form-modal fieldset div input{
+  max-width: 95%;
+}

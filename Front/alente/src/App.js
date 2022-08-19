@@ -12,8 +12,9 @@ import Doacoes from "./Componentes/doacoes/index"
 import Login from "./Componentes/cadastro-e-login/login"
 import FaleConosco from "./Componentes/fale_conosco/index"
 import SobreNos from "./Componentes/sobre_nos/index";
-import HistInicio from "./Componentes/sobre_nos/historia_de_inicio/index.jsx";
-import Parceiros from "./Componentes/cad-parceiros/index.jsx";
+import HistInicio from "./Componentes/sobre_nos/historia_de_inicio/index";
+import Parceiros from "./Componentes/cad-parceiros/index";
+import DoeLeite from "./Componentes/doeleite/index";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
       		<Route path="/sobrenos" element={<SobreNos/>}/>
 		<Route path="/historiadeinicio" element={<HistInicio/>}/>
 		<Route path="/parceiros" element={<Parceiros/>}/>
+		<Route path="/doeleite" element={<DoeLeite/>}/>
       	</Routes>
 	<Rodape/>
       </Router>
