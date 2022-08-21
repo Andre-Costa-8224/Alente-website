@@ -1,0 +1,22 @@
+.artigoprograma{
+  display: flex;
+  margin-bottom: 3%;
+}
+
+#txtdiv{
+  width: 85%;
+  color: #B58281;
+}
+
+#txtdiv div h1{
+  margin-top: 2%;
+}
+
+#btnagendamento{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#btnagendamento button{
+  margin-right: 3%;
+}

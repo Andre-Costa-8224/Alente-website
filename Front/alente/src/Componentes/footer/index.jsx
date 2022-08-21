@@ -15,7 +15,7 @@ const Rodape = () => {
 		    <Link className="link" to="/">Home</Link>
 		    <Link className="link" to="/sobrenos">Sobre nós</Link>
 		    <Link className="link" to="/comofunciona">Como funciona</Link>
-		    <Link className="link" to="/">Programas</Link>
+		    <Link className="link" to="/Programas">Programas</Link>
 		    <Link className="link" to="/historiadeinicio">Nossa História</Link>
 		    <Link className="link" to="/faleconosco">Fale Conosco</Link>
 		</div>

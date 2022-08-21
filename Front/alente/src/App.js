@@ -15,6 +15,7 @@ import SobreNos from "./Componentes/sobre_nos/index";
 import HistInicio from "./Componentes/sobre_nos/historia_de_inicio/index";
 import Parceiros from "./Componentes/cad-parceiros/index";
 import DoeLeite from "./Componentes/doeleite/index";
+import Programas from "./Componentes/programas/index";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
 		<Route path="/historiadeinicio" element={<HistInicio/>}/>
 		<Route path="/parceiros" element={<Parceiros/>}/>
 		<Route path="/doeleite" element={<DoeLeite/>}/>
+		<Route path="/programas" element={<Programas/>}/>
       	</Routes>
 	<Rodape/>
       </Router>
