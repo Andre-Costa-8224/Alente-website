@@ -1,0 +1,15 @@
+#formularioagenda label{
+  margin-bottom: 2%;
+}
+
+#data span{
+ 
+}
+
+#data input:in-range{
+  
+}
+
+#programas select{
+  width: 100%;
+}
