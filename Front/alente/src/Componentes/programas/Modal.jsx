@@ -40,7 +40,7 @@ const ModalProgramas = (props) => {
         aria-describedby="modal-modal-description"
         >
         <Box sx={boxstyle}>
-          <Typography id="modal-modal-title" variant="h6" component="h2" className="fontetomrosaescuro">
+          <Typography sx={{textAlign: 'center'}} id="modal-modal-title" variant="h6" component="h2" className="fontetomrosaescuro">
             Agende um atendimento!
           </Typography>
           <Typography id="modal-modal-description" sx={ { mt: 2, padding: '25px' }} className="backgroundamarelado">
@@ -54,17 +54,17 @@ const ModalProgramas = (props) => {
 		</select>
 	      </label>
 	      <label id="data">
-		<input type="date" id="dia" />
+		<input type="date" id="dia" required />
 	      </label>
 	      <label id="horario">
-		<input type="time" placeholder="horario"/>
+		<input type="time" required placeholder="horario"/>
 	      </label>
 	      <label>
-		<input type="checkbox"/>
+		<input type="checkbox" required/>
 		<span>Aceito <a href="#">termos e condições</a></span>
 	      </label>
 	      <div>
-		<input type="button" className="btn btntomrosaescuro" value="Agendar"/>
+		<input type="submit" className="btn btntomrosaescuro" value="Agendar"/>
 	      </div>
 	    </form>
           </Typography>

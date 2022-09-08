@@ -11,16 +11,20 @@ PALETA DE CORES:
 }
 
 .btntomrosaescuro{
-  background-color: #B58281;
+  background-color: #A57576;
   color: white;
 }
 
 .backgroundamarelado{
   background-color: #F4EED8;
-  color: #B58281;
+  color: #A57576;
 }
 
 .fontetomrosaescuro{
   background-color: white;
-  color: #B58281;
+  color: #A57576;
+}
+
+.M05{
+  color: #B88C8D;
 }

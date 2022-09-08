@@ -1,0 +1,22 @@
+
+#dados{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #E9E9E9;
+  width: 80%;
+  padding: 5%;
+  margin: auto auto 5% auto;
+  border-radius: 4%;
+  box-shadow: 0px 2px 1px lightgrey;
+}
+
+#titulo{
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+#graficos{
+  
+}
