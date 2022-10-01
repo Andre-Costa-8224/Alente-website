@@ -47,15 +47,15 @@ const Cabecalho = () => {
 	  {
 	    isMatch ? (
 		<>
-		  <Typography sx={{display: "flex", alignItems: "center"}}><img src={logoalente} alt="logo alente" style={{width: "30%", height: "20%"}}/><img src={seio} style={{width: "20%", height: "14%"}} alt="logo seio"/></Typography>
+		  <Typography sx={{display: "flex", alignItems: "center", justifyContent: "center"}}><img src={logoalente} alt="logo alente" style={{margin: "auto",width: "30%", height: "20%"}}/><img src={seio} style={{width: "20%", height: "14%"}} alt="logo seio"/></Typography>
 		  <DrawerComp/>
 		</>
 	    ) : (
 		<>
-		  <img src={logoalente} alt="logo instituto alente" style={{height: "5%", width: "15%"}}/><img src={seio} alt="logo seio" style={{width: "90px", height: "80px"}}/>
+		  <Link to={'/'} style={{display: 'flex', marginTop: '2%', marginBottom: '2%'}}><img src={logoalente} alt="logo instituto alente" style={{height: "70%", width: "70%"}}/><img src={seio} alt="logo seio" style={{width: "90px", height: "80px"}}/></Link>
 		  <Tabs sx={{marginRight: "auto"}}>
 		  {
-		    pages.map((page, index) => (<Link to={destination[index]} style={{color: 'black', textDecoration: 'none'}}><Tab label={page}/></Link>))
+		    pages.map((page, index) => (<Link to={destination[index]} style={{color: "#724243", fontSize: "x-large", fontWeight: "bold", textDecoration: 'none'}}><Tab label={page}/></Link>))
 		  }
 		  </Tabs>
 		  <IconButton size="large" aria-label="account" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleMenu}>

@@ -1,3 +1,5 @@
+/*ÁREA DO COMPONENTE LOGIN*/
+
 .formlog {
   margin: 20px auto 15px auto;
 }
@@ -61,7 +63,7 @@
 .cadpage{
   display: flex;
   justify-content: space-around;
-  background-image: url(../../Imagens/maesegurandobebe.jpg);
+  background-image: linear-gradient(to left, #ae6f7062 100%, transparent, transparent), url(../../Imagens/maesegurandobebe.jpg);
   background-size: cover;
   background-position: center;
   margin-bottom: 0;
@@ -85,12 +87,11 @@
 }
 
 .formcad{
-  margin-top: 30px;
   max-width: 50vw;
   background-color: white;
   padding: 30px;
   border-radius: 7px;
-  margin: auto;
+  margin: 30px auto 30px auto;
 }
 
 .birthinput{
