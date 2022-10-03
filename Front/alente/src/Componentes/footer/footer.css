@@ -2,10 +2,11 @@
   margin-top: 0;
   padding-top: 15px;
   display: flex;
-  background-color: #B58281;
+  background-color: #B88C8D;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  font-weight: bold;
 }
 .rodape div{
   display: flex;
@@ -30,9 +31,14 @@
 #doacaolink:hover{
   color: blue;
 }
+
 .link{
   color: white;
   text-decoration: none;
+}
+
+.fontebranco{
+  color: white;
 }
 
 @media (max-width: 600px){

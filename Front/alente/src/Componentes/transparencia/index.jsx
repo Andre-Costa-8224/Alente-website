@@ -67,19 +67,18 @@ const Transparencia = () => {
         ))}
       </section>
       <section id="graficos">
-        <article>
+        <article id="selectebtn">
           <div>
             <select id="filtro" name="">
               <option value="">Filtre por ano</option>
               <option value="2022">2022</option>
             </select>
           </div>
-          <div></div>
           <div>
             <button className="btn btntomrosaescuro">Baixar balanço patrimonial</button>
           </div>
         </article>
-        <article>
+        <article id="graficosarticle">
           <div>
             <Chart
               width={"300px"}

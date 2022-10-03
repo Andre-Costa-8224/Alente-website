@@ -4,13 +4,14 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import msg from "../../Imagens/mensagem-recebida.png";
 
 const boxstyle = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  maxWidth: 400,
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -35,7 +36,8 @@ const ChildModal = (props) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={boxstyle} className="fontetomrosaescuro">
-          <Typography id="modal-modal-title" component="h2">
+          <Typography id="modal-modal-title" sx={{display: "flex", justifyContent: "space-evenly", flexWrap: "wrap", marginBottom: "5%"}} component="h2">
+            <img src={msg} style={{maxWidth: "12%"}} alt="mensagem-recebida" />
             <h2>Achou interessante?!</h2>
           </Typography>
           <Typography

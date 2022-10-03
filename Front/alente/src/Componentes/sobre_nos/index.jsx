@@ -1,5 +1,6 @@
 import "./index.css";
 import { Link } from "react-router-dom";
+import seta from "../../Imagens/SetaIcon.png";
 
 const SobreNos = () => {
   //JavaScript aqui se precisar
@@ -76,7 +77,7 @@ const SobreNos = () => {
             <Link className="linkhistoria" to="/historiadeinicio">
               Saiba mais{" "}
               <img
-                src="https://cdn-icons.flaticon.com/png/512/3634/premium/3634202.png?token=exp=1656722224~hmac=7c5bdb3a940c4e9f10eb4217b006bcbd"
+                src={seta}
                 alt="seta"
               />
             </Link>

@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import confete from "../../Imagens/confete.png";
 
 const boxstyle = {
   position: "absolute",
@@ -39,7 +40,9 @@ const ModalInf = (props) => {
             variant="h6"
             component="h2"
             className="fontetomrosaescuro"
+            
           >
+            <img src={confete} alt="confete" style={{marginRight: "5%", marginBottom: "5%"}} />
             Obrigado por se juntar a essa linda família!
           </Typography>
           <Typography
