@@ -1,6 +1,7 @@
 import "./index.css";
 import ModalInf from "./Modal";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Doacoes = () => {
   const [open, setOpen] = useState(false);
@@ -73,12 +74,10 @@ const Doacoes = () => {
                 <input type="number" placeholder="outro valor" />
               </label>
             </div>
-            <div className="marginauto">
+            <div className="">
               <label>
                 <input type="checkbox" />
-                <a href="" style={{ textDecoration: "none" }}>
-                  Aceito termos e condições
-                </a>
+                <Link to={"/termosecondicoes"} target="_blank">Aceito termos e condições</Link>
               </label>
             </div>
             <br />

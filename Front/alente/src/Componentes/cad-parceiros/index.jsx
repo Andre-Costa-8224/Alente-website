@@ -42,7 +42,7 @@ const Parceiros = () => {
           <label>
             <input type="checkbox" />
             <span>Aceito </span>
-            <a href="">Termos e condições</a>
+            <Link to={"/termosecondicoes"} target="_blank">Termos e condições</Link>
           </label>
           <div id="botaoenviar">
             <input

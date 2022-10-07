@@ -52,10 +52,15 @@ const FaleConosco = (props) => {
                 ></textarea>
               </div>
               <div className="form-floating mb-3">
-                <input type="checkbox" className="inputtermoseconds" />
-                <label className="termoseconds">
-                  <a href="#">Aceito termos e condições</a>
-                </label>
+                <input
+                  style={{ width: "100%" }}
+                  type="checkbox"
+                  className="inputtermoseconds"
+                />
+
+                <Link to={"/termosecondicoes"} target="_blank">
+                  Aceito termos e condições
+                </Link>
               </div>
               <br />
               <div>

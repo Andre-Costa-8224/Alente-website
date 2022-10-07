@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 
 const Cadastro = () => {
@@ -15,6 +16,7 @@ const Cadastro = () => {
                 className="form-control"
                 id="floatingName"
                 placeholder="your name"
+                required
               />
               <label for="floatingName">Nome</label>
             </div>
@@ -24,6 +26,7 @@ const Cadastro = () => {
                 className="form-control"
                 id="floatingProfissao"
                 placeholder="Sua profissão"
+                required
               />
               <label for="floatingProfissao">Profissão</label>
             </div>
@@ -33,6 +36,7 @@ const Cadastro = () => {
                 className="form-control birthinput"
                 id="floatingBirth"
                 placeholder="your birthday"
+                required
               />
               <label for="floatingBirth">Nascimento</label>
             </div>
@@ -42,6 +46,7 @@ const Cadastro = () => {
                 className="form-control"
                 id="floatingPhone"
                 placeholder="your phone number"
+                required
               />
               <label for="floatingPhone">Seu telefone</label>
             </div>
@@ -51,6 +56,7 @@ const Cadastro = () => {
                 className="form-control"
                 id="floatingEmail"
                 placeholder="your email"
+                required
               />
               <label for="floatingEmail">Seu email</label>
             </div>
@@ -58,14 +64,21 @@ const Cadastro = () => {
               <textarea
                 className="txtarea"
                 rows="5"
+                required
                 placeholder="A família alente precisa de mãos! conte-nos um pouco sobre como você pode agregar à nossa comunidade"
               ></textarea>
             </div>
             <div className="form-floating mb-3">
-              <input type="checkbox" className="inputtermoseconds" />
-              <label className="termoseconds">
-                <a href="#">Aceito termos e condições</a>
-              </label>
+              <input
+                style={{ marginRight: "5%", width: "100%" }}
+                type="checkbox"
+                required
+                className="inputtermoseconds"
+              />
+
+              <Link to={"/termosecondicoes"} target="_blank">
+                Aceito termos e condições
+              </Link>
             </div>
             <br />
             <div>
@@ -77,7 +90,7 @@ const Cadastro = () => {
         </form>
       </fieldset>
       <section>
-        <article style={{color: 'white', fontWeight: 'bold'}}>
+        <article style={{ color: "white", fontWeight: "bold" }}>
           <h1>JUNTE-SE A FAMÍLIA ALENTE!</h1>
           <p>
             Pensando em cada detalhe, a nossa comunidade oferece atendimentos

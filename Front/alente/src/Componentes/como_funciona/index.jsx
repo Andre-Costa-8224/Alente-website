@@ -41,7 +41,7 @@ const ComoFunciona = () => {
           </article>
         </section>
         <section className="sectbtn">
-          <Link to="#" className="btn-brown">
+          <Link to="/programas" className="btn-brown">
             Conheça nossos programas
           </Link>
         </section>

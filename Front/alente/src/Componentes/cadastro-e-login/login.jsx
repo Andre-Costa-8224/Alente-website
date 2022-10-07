@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 
 const Login = () => {
@@ -14,6 +15,7 @@ const Login = () => {
                 class="form-control"
                 id="floatingInput"
                 placeholder="name@example.com"
+                required
               />
               <label for="floatingInput">Email address</label>
             </div>
@@ -23,19 +25,21 @@ const Login = () => {
                 class="form-control"
                 id="floatingPassword"
                 placeholder="Password"
+                required
               />
               <label for="floatingPassword">Password</label>
             </div>
             <br />
             <span>
-              <input type="checkbox" style={{ marginRight: "5px" }} />
-              <a href="">Aceito termos e condições</a>
+              <input type="checkbox" style={{ marginRight: "5%" }} required />
+              <Link to={"/termosecondicoes"} target="_blank">Aceito termos e condições</Link>
             </span>
             <input
               style={{ color: "white", marginTop: "17px" }}
               type="submit"
               id="submit"
               value="Continuar"
+              required
             />
           </div>
         </form>

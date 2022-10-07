@@ -5,9 +5,7 @@ import { Link, BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Carrossel from "./Componentes/main/index";
 import Rodape from "./Componentes/footer/index";
 import Perfil from "./Componentes/perfil/index";
-import MenuOpcoes from "./Componentes/menu_opcoes/index";
 import ComoFunciona from "./Componentes/como_funciona/index";
-import MenuSaude from "./Componentes/menu_saude/index";
 import Doacoes from "./Componentes/doacoes/index";
 import Login from "./Componentes/cadastro-e-login/login";
 import FaleConosco from "./Componentes/fale_conosco/index";
@@ -17,6 +15,7 @@ import Parceiros from "./Componentes/cad-parceiros/index";
 import DoeLeite from "./Componentes/doeleite/index";
 import Programas from "./Componentes/programas/index";
 import Transparencia from "./Componentes/transparencia/index";
+import TermsConds from "./Componentes/termosecondicoes";
 
 function App() {
   return (
@@ -28,9 +27,7 @@ function App() {
           <Route path="cadastro" element={<Cadastro />} />
           <Route path="/login" element={<Login />} />
           <Route path="/perfil" element={<Perfil />} />
-          <Route path="/menuopcoes" element={<MenuOpcoes />} />
           <Route path="/comofunciona" element={<ComoFunciona />} />
-          <Route path="/menusaude" element={<MenuSaude />} />
           <Route path="/faleconosco" element={<FaleConosco />} />
           <Route path="/doacoes" element={<Doacoes />} />
           <Route path="/sobrenos" element={<SobreNos />} />
@@ -39,6 +36,7 @@ function App() {
           <Route path="/doeleite" element={<DoeLeite />} />
           <Route path="/programas" element={<Programas />} />
           <Route path="/transparencia" element={<Transparencia />} />
+          <Route path="/termosecondicoes" element={<TermsConds/>}/>
         </Routes>
         <Rodape />
       </Router>

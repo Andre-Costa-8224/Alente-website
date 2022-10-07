@@ -76,7 +76,7 @@ const ModalProgramas = (props) => {
               <label>
                 <input type="checkbox" required />
                 <span>
-                  Aceito <a href="#">termos e condições</a>
+                  Aceito <Link to={"/termosecondicoes"} target="_blank">termos e condições</Link>
                 </span>
               </label>
               <div>

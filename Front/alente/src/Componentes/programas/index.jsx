@@ -24,6 +24,12 @@ const Programas = () => {
     mulhercozinhando,
     mulhernanatureza,
   ];
+  const altimagens = [
+    "bebemamando",
+    "nutricionista",
+    "mulhercozinhando",
+    "mulhernanatureza",
+  ]
 
   return (
     <>
@@ -41,7 +47,7 @@ const Programas = () => {
               <div id="txtdiv">
                 <div>
                   <h1 key={value}>{item}</h1>
-                  <p>{textos[value]}</p>
+                  <p>O Instituto Alente inicialmente nasceu de uma necessidade do banco de leite em diversas regiões de Pernambuco, principalmente no Recife, onde foi detectado uma grande escacez de leite materno para bebês prematuros, mães impossibilitadas de amamentar, puérperias e afins.</p>
                 </div>
                 <div id="btnagendamento">
                   <button
@@ -52,7 +58,7 @@ const Programas = () => {
                   </button>
                 </div>
               </div>
-              <img src={imagens[value]} alt={imagens[value] + "..."} />
+              <img src={imagens[value]} alt={altimagens[value]} />
             </article>
           );
         })}

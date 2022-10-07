@@ -13,7 +13,7 @@ const Perfil = () => {
   ];
 
   let cardsmain = [
-    "Confiro seus agendamentos nos nossos programas!",
+    "Confira seus agendamentos nos nossos programas!",
     "Altere seus dados!",
     "Acompanhe suas doações realizadas!",
     "Acesse ebooks de nossos cursos!",
