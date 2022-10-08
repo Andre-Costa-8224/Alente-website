@@ -16,17 +16,27 @@ import DoeLeite from "./Componentes/doeleite/index";
 import Programas from "./Componentes/programas/index";
 import Transparencia from "./Componentes/transparencia/index";
 import TermsConds from "./Componentes/termosecondicoes";
+import { AuthProvider } from "./Context/auth";
+import useAuth from "./hooks/useAuth";
+
+const Private = ({Item}) => {
+
+  const signed = useAuth().signed
+  return signed > 0 ? <Item/> : <Login/>
+
+}
 
 function App() {
+
   return (
-    <div>
+    <AuthProvider>
       <Router>
         <Cabecalho />
         <Routes>
           <Route path="/" exact element={<Carrossel />} />
-          <Route path="cadastro" element={<Cadastro />} />
+          <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/perfil" element={<Perfil />} />
+          <Route path="/perfil" element={<Private Item={Perfil} />} />
           <Route path="/comofunciona" element={<ComoFunciona />} />
           <Route path="/faleconosco" element={<FaleConosco />} />
           <Route path="/doacoes" element={<Doacoes />} />
@@ -34,13 +44,14 @@ function App() {
           <Route path="/historiadeinicio" element={<HistInicio />} />
           <Route path="/parceiros" element={<Parceiros />} />
           <Route path="/doeleite" element={<DoeLeite />} />
-          <Route path="/programas" element={<Programas />} />
+          <Route path="/programas" element={<Private  Item={Programas} />} />
           <Route path="/transparencia" element={<Transparencia />} />
           <Route path="/termosecondicoes" element={<TermsConds/>}/>
+          
         </Routes>
         <Rodape />
       </Router>
-    </div>
+    </AuthProvider>
   );
 }
 

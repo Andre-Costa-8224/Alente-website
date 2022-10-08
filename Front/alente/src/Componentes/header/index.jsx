@@ -18,9 +18,12 @@ import {
 } from '@mui/material';
 
 import AccountCircle from "@mui/icons-material/AccountCircle";
+import useAuth from "../../hooks/useAuth";
 
 
 const Cabecalho = () => {
+
+  const signed = useAuth().signed;
 
   const pages = ["Sobre nós", "Como funciona", "Programas", "Fale conosco"];
   const destination = ["sobrenos", "comofunciona", "programas", "faleconosco"];
@@ -61,10 +64,13 @@ const Cabecalho = () => {
 		  <IconButton size="large" aria-label="account" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleMenu}>
 		    <AccountCircle/>
 		  </IconButton>
-		  <Menu style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}} id="menu-appbar" anchorEl={anchorEl} anchorOrigin={{vertical: "top", horizontal: "right"}} keepMounted transformOrigin={{ vertical: "top", horizontal: "right"}} open={Boolean(anchorEl)} onClose={handleClose}>
+      {signed > 0 ? <Menu style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}} id="menu-appbar" anchorEl={anchorEl} anchorOrigin={{vertical: "top", horizontal: "right"}} keepMounted transformOrigin={{ vertical: "top", horizontal: "right"}} open={Boolean(anchorEl)} onClose={handleClose}>
+		    <MenuItem onClick={handleClose} style={{margin: "auto", textAlign: "center", width: "90%", background: "pink"}}><Link to="/perfil" style={{textAlign: "center", color: "black", textDecoration: "none", marginBttom: "3px"}}>Perfil</Link></MenuItem>
+		  </Menu> : <Menu style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}} id="menu-appbar" anchorEl={anchorEl} anchorOrigin={{vertical: "top", horizontal: "right"}} keepMounted transformOrigin={{ vertical: "top", horizontal: "right"}} open={Boolean(anchorEl)} onClose={handleClose}>
 		    <MenuItem onClick={handleClose} style={{margin: "auto", textAlign: "center", width: "90%", background: "pink"}}><Link to="/login" style={{textAlign: "center", color: "black", textDecoration: "none", marginBttom: "3px"}}>Login</Link></MenuItem>
 		    <MenuItem onClick={handleClose} style={{textAlign: "center", width: "90%", margin: "auto", background: "pink"}}><Link to="/cadastro" style={{color: "black", textAlign: "center", textDecoration: "none"}}>Cadastre-se</Link></MenuItem>
-		  </Menu>
+		  </Menu>}
+		  
 		</>
 	    )
 	  }

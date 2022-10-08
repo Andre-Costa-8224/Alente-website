@@ -1,13 +1,39 @@
 import { Link } from "react-router-dom";
 import "./index.css";
+import { useState } from "react";
+import useAuth from "../../hooks/useAuth";
+
 
 const Cadastro = () => {
-  //JavaScript aqui se precisar
+
+  const { signup } = useAuth();
+  
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const handleCad = (event) => {
+    event.preventDefault()
+    if (!email | !senha) {
+      return;
+    }
+
+    const res = signup(email, senha);
+
+    if (res) {
+      alert(res)
+      return;
+    }
+
+    alert("Usuário cadastrado com sucesso!")
+
+    window.location.assign("/login");
+  };
+
   return (
     <main className="altura cadpage">
       <br />
       <fieldset className="formcad">
-        <form>
+        <form onSubmit={handleCad}>
           <h1>Cadastre-se</h1>
           <div className="form-floating">
             <div className="form-floating mb-3">
@@ -56,9 +82,23 @@ const Cadastro = () => {
                 className="form-control"
                 id="floatingEmail"
                 placeholder="your email"
+                value={email}
+                onChange={(e) => [setEmail(e.target.value)]}
                 required
               />
               <label for="floatingEmail">Seu email</label>
+            </div>
+            <div className="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Senha"
+                value={senha}
+                onChange={(e) => [setSenha(e.target.value)]}
+                required
+              />
+              <label for="floatingPassword">Senha</label>
             </div>
             <div className="form-floating mb-3">
               <textarea

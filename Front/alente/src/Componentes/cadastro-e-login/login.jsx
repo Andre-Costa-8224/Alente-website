@@ -1,12 +1,34 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 import "./index.css";
 
 const Login = () => {
-  //JavaScript aqui se precisar
+
+  const { signin } = useAuth();
+  const navigate = useNavigate();
+  
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const handleLogin = (event) => {
+    event.preventDefault()
+
+    const res = signin(email, senha);
+
+    if (res) {
+      alert(res)
+      return;
+    }
+
+    navigate("/perfil");
+  };
+
+
   return (
     <div className="altura">
       <fieldset className="formlog">
-        <form>
+        <form onSubmit={handleLogin}>
           <h1>Entrar</h1>
           <div className="form-floating">
             <div class="form-floating mb-3">
@@ -15,22 +37,26 @@ const Login = () => {
                 class="form-control"
                 id="floatingInput"
                 placeholder="name@example.com"
+                value={email}
+                onChange={(e) => [setEmail(e.target.value)]}
                 required
               />
-              <label for="floatingInput">Email address</label>
+              <label for="floatingInput">Email</label>
             </div>
             <div className="form-floating">
               <input
                 type="password"
                 class="form-control"
                 id="floatingPassword"
-                placeholder="Password"
+                placeholder="Senha"
                 required
+                value={senha}
+                onChange={(e) => [setSenha(e.target.value)]}
               />
-              <label for="floatingPassword">Password</label>
+              <label for="floatingPassword">Senha</label>
             </div>
-            <br />
-            <span>
+
+            <span style={{ marginTop: "8%" }}>
               <input type="checkbox" style={{ marginRight: "5%" }} required />
               <Link to={"/termosecondicoes"} target="_blank">Aceito termos e condições</Link>
             </span>
@@ -72,6 +98,11 @@ const Login = () => {
             </svg>
             Faça login com google
           </a>
+        </div>
+        <br />
+        <div>
+          <p>Ainda não possúi uma conta?</p>
+          <Link to={"/cadastro"}>Cadastre-se</Link>
         </div>
       </fieldset>
     </div>
