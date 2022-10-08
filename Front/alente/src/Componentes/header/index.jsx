@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import DrawerComp from "./Drawer";
 import logoalente from "../../Imagens/logoalente.png"
 import seio from "../../Imagens/seio.png"
@@ -24,6 +24,13 @@ import useAuth from "../../hooks/useAuth";
 const Cabecalho = () => {
 
   const signed = useAuth().signed;
+
+  const { signout } = useAuth();
+  const navigate = useNavigate();
+
+  /**
+   onClick={() => [signout(), navigate("/")]}
+   */
 
   const pages = ["Sobre nós", "Como funciona", "Programas", "Fale conosco"];
   const destination = ["sobrenos", "comofunciona", "programas", "faleconosco"];
@@ -66,6 +73,7 @@ const Cabecalho = () => {
 		  </IconButton>
       {signed > 0 ? <Menu style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}} id="menu-appbar" anchorEl={anchorEl} anchorOrigin={{vertical: "top", horizontal: "right"}} keepMounted transformOrigin={{ vertical: "top", horizontal: "right"}} open={Boolean(anchorEl)} onClose={handleClose}>
 		    <MenuItem onClick={handleClose} style={{margin: "auto", textAlign: "center", width: "90%", background: "pink"}}><Link to="/perfil" style={{textAlign: "center", color: "black", textDecoration: "none", marginBttom: "3px"}}>Perfil</Link></MenuItem>
+        <MenuItem onClick={() => [signout(), navigate("/")]} style={{margin: "auto", textAlign: "center", width: "90%", background: "pink"}}><Link to="/login" style={{textAlign: "center", color: "black", textDecoration: "none", marginBttom: "3px"}}>Sair</Link></MenuItem>
 		  </Menu> : <Menu style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}} id="menu-appbar" anchorEl={anchorEl} anchorOrigin={{vertical: "top", horizontal: "right"}} keepMounted transformOrigin={{ vertical: "top", horizontal: "right"}} open={Boolean(anchorEl)} onClose={handleClose}>
 		    <MenuItem onClick={handleClose} style={{margin: "auto", textAlign: "center", width: "90%", background: "pink"}}><Link to="/login" style={{textAlign: "center", color: "black", textDecoration: "none", marginBttom: "3px"}}>Login</Link></MenuItem>
 		    <MenuItem onClick={handleClose} style={{textAlign: "center", width: "90%", margin: "auto", background: "pink"}}><Link to="/cadastro" style={{color: "black", textAlign: "center", textDecoration: "none"}}>Cadastre-se</Link></MenuItem>

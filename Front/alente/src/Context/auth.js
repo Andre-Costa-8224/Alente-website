@@ -60,11 +60,14 @@ export const AuthProvider = ({ children }) => {
         return;
     };
 
-    
+    const signout = () => {
+        setUser(null);
+        localStorage.removeItem("user_token");
+    };
 
     return (
         <AuthContext.Provider
-            value={{ user, signed: !!user, signin, signup,  }}
+            value={{ user, signed: !!user, signin, signup, signout}}
         >
             {children}
         </AuthContext.Provider>
