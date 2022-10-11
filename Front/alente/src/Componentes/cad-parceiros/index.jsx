@@ -1,12 +1,35 @@
 import { Link } from "react-router-dom";
 import "./index.css";
 import ModalInf from "./Modal";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Parceiros = () => {
+
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const form = useRef();
+
+  const enviarEmail = (e) => {
+
+    e.preventDefault()
+
+    emailjs.sendForm(
+      'service_k198qoi',
+      'template_l6a3h08',
+      form.current,
+      'Dad6_Pl4O23-zNBBH'
+    )
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+      e.target.reset()
+      handleOpen()
+  }
 
   return (
     <div id="divparceiros">
@@ -22,34 +45,34 @@ const Parceiros = () => {
         </article>
       </section>
       <section id="formparceiros">
-        <form>
+        <form ref={form} onSubmit={enviarEmail}>
           <h1>Inscreva-se</h1>
           <label>
-            <input type="text" placeholder="Nome" />
+            <input type="text" required placeholder="Nome" name="nome" />
           </label>
           <label>
-            <input type="email" placeholder="Email" />
+            <input type="email" required placeholder="Email" name="email" />
           </label>
           <label>
-            <input type="tel" placeholder="Telefone" />
+            <input type="tel" required placeholder="Telefone" name="telefone" />
           </label>
           <label>
-            <input type="text" placeholder="Endereço" />
+            <input type="text" required placeholder="Endereço" name="endereco" />
           </label>
           <label>
-            <input type="number" placeholder="CNPJ" />
+            <input type="number" required placeholder="CNPJ" name="cnpj" />
           </label>
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" required />
             <span>Aceito </span>
             <Link to={"/termosecondicoes"} target="_blank">Termos e condições</Link>
           </label>
           <div id="botaoenviar">
             <input
-              onClick={() => handleOpen()}
+              
               className="btn fontetomrosaescuro"
               value="ENVIAR"
-              type="button"
+              type="submit"
             />
           </div>
         </form>

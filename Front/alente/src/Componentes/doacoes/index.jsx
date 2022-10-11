@@ -10,11 +10,17 @@ const Doacoes = () => {
 
   return (
     <>
+      <section style={{textAlign: "center", margin: "5% auto 5% auto"}}>
+        <p className="alert alert-warning">
+          Funcionalidade em andamento!
+        </p>
+        <p style={{fontWeight: "bold"}}>Caso tenha interesse contate-nos pelo <a href="https://web.whatsapp.com/send?phone=351920455154" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+      </section>
       <section className="corpo">
         <article id="arttxt">
           <h1>
-            nada é mais belo do que estender a mão para o próximo e alegar um
-            coração necessitado. seja o motivo do Sorriso de alguém!
+            nada é mais belo do que estender a mão para o próximo e alegrar um
+            coração necessitado. Seja o motivo do Sorriso de alguém!
           </h1>
         </article>
         <article className="artform">
@@ -74,8 +80,8 @@ const Doacoes = () => {
                 <input type="number" placeholder="outro valor" />
               </label>
             </div>
-            <div className="">
-              <label>
+            <div>
+              <label id="check">
                 <input type="checkbox" />
                 <Link to={"/termosecondicoes"} target="_blank">Aceito termos e condições</Link>
               </label>

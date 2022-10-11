@@ -49,7 +49,7 @@ const Rodape = () => {
         </Link>
       </div>
       <div>
-        <Link className="link" id="doacaolink" to="/">
+        <Link className="link" id="doacaolink" to="/doacoes">
           Faça uma doação financeira
         </Link>
         <div id="socialmedias">

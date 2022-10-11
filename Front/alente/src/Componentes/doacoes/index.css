@@ -137,6 +137,11 @@
   margin: auto auto 35px auto;
 }
 
+#check input{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 /*MOBILE inicio*/
 
 @media (max-width: 600px){

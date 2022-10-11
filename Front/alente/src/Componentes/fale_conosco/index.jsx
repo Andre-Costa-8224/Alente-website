@@ -53,7 +53,7 @@ const FaleConosco = (props) => {
                   type="tel"
                   className="form-control"
                   id="floatingPhone"
-                  name="numero"
+                  name="telefone"
                   placeholder="your phone number"
                 />
                 <label for="floatingPhone">Seu telefone</label>

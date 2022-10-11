@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import msg from "../../Imagens/mensagem-recebida.png";
+import emailjs from "@emailjs/browser";
 
 const boxstyle = {
   position: "absolute",
@@ -26,6 +26,7 @@ const btnstyle = {
 };
 
 const ChildModal = (props) => {
+
   return (
     <>
       <Modal
@@ -61,13 +62,31 @@ const ChildModal = (props) => {
 };
 
 const ModalInf = (props) => {
+
   const [openChild, setOpenChild] = useState(false);
   const handleOpenChild = () => setOpenChild(true);
   const handleCloseChild = () => setOpenChild(false);
 
-  const submit = (e) => {
-    e.preventDefault();
-  };
+  const form = useRef();
+
+  const enviarEmail = (e) => {
+
+    e.preventDefault()
+
+    emailjs.sendForm(
+      'service_k198qoi',
+      'template_dhtoqsn',
+      form.current,
+      'Dad6_Pl4O23-zNBBH'
+    )
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+      e.target.reset()
+      handleOpenChild()
+  }
 
   return (
     <>
@@ -92,32 +111,33 @@ const ModalInf = (props) => {
             sx={{ mt: 2, padding: "5px" }}
             className="backgroundamarelado"
           >
-            <form className="form-modal" onSubmit={submit}>
+            <form className="form-modal" ref={form} onSubmit={enviarEmail} >
               <fieldset>
                 <div>
-                  <input type="text" placeholder="nome" />
+                  <input type="text" required name="nome" placeholder="nome" />
                 </div>
                 <div>
-                  <input type="date" />
+                  <input type="date" required name="data" />
                 </div>
                 <div>
-                  <input type="email" placeholder="email" />
+                  <input type="email" required name="email" placeholder="email" />
                 </div>
                 <div>
-                  <input type="text" placeholder="endereço" />
+                  <input type="text" required name="endereco" placeholder="endereço" />
                 </div>
                 <div>
-                  <input type="tel" placeholder="telefone" />
+                  <input type="tel" required name="telefone" placeholder="telefone" />
                 </div>
                 <div>
-                  <input type="number" placeholder="cep" maxLenght={8} />
+                  <input type="number" required name="cep" placeholder="cep" maxLenght={8} />
                 </div>
+                <input type="text" value={"Desejo contribuir com a doação de leite"} style={{display: "none"}} name="mensagem"/>
               </fieldset>
               <br />
               <div style={{ display: "flex", justifyContent: "right" }}>
                 <button
                   className="btn fontetomrosaescuro"
-                  style={{ marginRight: "2%" }}
+                  style={{ marginRight: "4%"}}
                   onClick={props.handleClose}
                 >
                   Voltar
@@ -126,7 +146,6 @@ const ModalInf = (props) => {
                   type="submit"
                   className="btn btntomrosaescuro"
                   value="Enviar"
-                  onClick={() => handleOpenChild()}
                 />
               </div>
               {handleOpenChild ? (

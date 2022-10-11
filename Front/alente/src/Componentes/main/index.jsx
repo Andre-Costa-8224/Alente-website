@@ -44,7 +44,7 @@ const Carrossel = () => {
                 <p className="marcalogoseiotxt">
                   DOAÇÃO DE LEITE
                   <br />
-                  <Link to="/doacoes" className="linkcarousel">
+                  <Link to="/doeleite" className="linkcarousel">
                     Saiba mais →
                   </Link>
                 </p>

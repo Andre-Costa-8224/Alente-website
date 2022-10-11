@@ -19,8 +19,7 @@ const boxstyle = {
 };
 
 const btnstyle = {
-  color: "white",
-  bgcolor: "#B58281",
+  color: "#B58281",
   border: "1px solid #B58281",
   marginRight: "5px",
 };
@@ -54,7 +53,7 @@ const ModalInf = (props) => {
           </Typography>
           <br />
           <div style={{ display: "flex", justifyContent: "right" }}>
-            <Button onClick={props.handleClose} sx={btnstyle}>
+            <Button onClick={props.handleClose} sx={btnstyle} >
               Voltar
             </Button>
           </div>
