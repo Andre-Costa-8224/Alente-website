@@ -1,18 +1,39 @@
 import { Link } from "react-router-dom";
 import "./index.css";
 import ModalContato from "./modal";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const FaleConosco = (props) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const form = useRef();
+
+  const enviarEmail = (e) => {
+
+    e.preventDefault()
+
+    emailjs.sendForm(
+      'service_k198qoi',
+      'template_dhtoqsn',
+      form.current,
+      'Dad6_Pl4O23-zNBBH'
+    )
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+      e.target.reset()
+  }
+
   return (
     <>
       <main className="faleconosco">
         <section className="secaoform">
-          <form className="formulario">
+          <form ref={form} onSubmit={enviarEmail} className="formulario">
             <br />
             <h1>Fale Conosco</h1>
             <div className="form-floating">
@@ -21,6 +42,7 @@ const FaleConosco = (props) => {
                   type="text"
                   className="form-control"
                   id="floatingName"
+                  name="nome"
                   placeholder="your name"
                 />
                 <label for="floatingName">Nome</label>
@@ -31,6 +53,7 @@ const FaleConosco = (props) => {
                   type="tel"
                   className="form-control"
                   id="floatingPhone"
+                  name="numero"
                   placeholder="your phone number"
                 />
                 <label for="floatingPhone">Seu telefone</label>
@@ -40,6 +63,7 @@ const FaleConosco = (props) => {
                   type="email"
                   className="form-control"
                   id="floatingEmail"
+                  name="email"
                   placeholder="your email"
                 />
                 <label for="floatingEmail">Seu email</label>
@@ -48,6 +72,7 @@ const FaleConosco = (props) => {
                 <textarea
                   className="txtarea"
                   rows="5"
+                  name="mensagem"
                   placeholder="A família alente precisa de mãos! conte-nos um pouco sobre como você pode agregar à nossa comunidade"
                 ></textarea>
               </div>
@@ -65,7 +90,7 @@ const FaleConosco = (props) => {
               <br />
               <div>
                 <input
-                  type="button"
+                  type="submit"
                   value="Enviar"
                   className="btnenviar"
                   onClick={() => handleOpen()}
