@@ -14,7 +14,7 @@ const Doacoes = () => {
         <p className="alert alert-warning">
           Funcionalidade em andamento!
         </p>
-        <p style={{fontWeight: "bold"}}>Caso tenha interesse contate-nos pelo <a href="https://web.whatsapp.com/send?phone=351920455154" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+        <p style={{fontWeight: "bold"}}>Caso tenha interesse contate-nos pelo <a href="https://wa.me/351920455154" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
       </section>
       <section className="corpo">
         <article id="arttxt">
