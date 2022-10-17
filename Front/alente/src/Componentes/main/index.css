@@ -3,8 +3,19 @@
   flex-direction: row;
 }
 
-.alturaimg{
-  min-height: 50vh;
+.alturaimgbranco{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.alturaimgrosa{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bebe1{
@@ -14,15 +25,35 @@
 }
 
 .bebe1 p{
-  padding-top: 65%;
   text-align: center;
   font-size: 2.5rem;
   color: white;
 }
 
-.linkcarousel{
+.linkcarouselbranco{
   font-size: 1.5rem;
   text-decoration: none;
+  color: white;
+}
+
+.linkcarouselbranco:hover{
+  color: #A57576;
+}
+
+.linkcarouselrosa{
+  color: #A57576;
+  font-weight: bold;
+}
+
+.linkcarouselrosa a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #A57576;
+}
+
+.linkcarouselrosa a:hover{
+  color: #D8BBBC;
 }
 
 .bebe2{

@@ -80,7 +80,7 @@ const Doacoes = () => {
                 <input type="number" placeholder="outro valor" />
               </label>
             </div>
-            <div>
+            <div id="termseconds">
               <label id="check">
                 <input type="checkbox" />
                 <Link to={"/termosecondicoes"} target="_blank">Aceito termos e condições</Link>

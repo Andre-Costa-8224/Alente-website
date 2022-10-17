@@ -26,6 +26,13 @@ const Private = ({Item}) => {
 
 }
 
+const Logged = ({Item}) => {
+
+  const signed = useAuth().signed
+  return signed < 0 ? <Item/> : <Carrossel/>
+
+}
+
 function App() {
 
   return (
@@ -35,7 +42,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Carrossel />} />
           <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Logged Item={Login} />} />
           <Route path="/perfil" element={<Private Item={Perfil} />} />
           <Route path="/comofunciona" element={<ComoFunciona />} />
           <Route path="/faleconosco" element={<FaleConosco />} />

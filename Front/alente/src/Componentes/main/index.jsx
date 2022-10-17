@@ -17,22 +17,22 @@ const Carrossel = () => {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <div className="d-block bebe1 alturaimg w-100">
+            <div className="bebe1 alturaimgbranco w-100">
               <p>
                 JUNTOS SOMOS MAIS FORTES!
                 <br />
-                <Link to="/comofunciona" className="linkcarousel">
+                <Link to="/comofunciona" className="linkcarouselbranco">
                   Entenda como nós funcionamos →
                 </Link>
               </p>
             </div>
           </div>
           <div className="carousel-item">
-            <div className="d-block bebe2 alturaimg w-100">
+            <div className=" bebe2 alturaimgbranco w-100">
               <p>
                 PROGRAMAS DE ATENDIMENTO
                 <br />
-                <Link to="/programas" className="linkcarousel">
+                <Link to="/programas" className="linkcarouselbranco">
                   Saiba mais →
                 </Link>
               </p>
@@ -40,11 +40,11 @@ const Carrossel = () => {
           </div>
           <div className="carousel-item">
             <div className="imagemcarousel">
-              <div className="d-block marcalogoseio alturaimg w-50">
-                <p className="marcalogoseiotxt">
+              <div className=" marcalogoseio alturaimgrosa w-50">
+                <p className="marcalogoseiotxt linkcarouselrosa">
                   DOAÇÃO DE LEITE
                   <br />
-                  <Link to="/doeleite" className="linkcarousel">
+                  <Link to="/doeleite" className="">
                     Saiba mais →
                   </Link>
                 </p>
@@ -54,7 +54,7 @@ const Carrossel = () => {
           </div>
           <div className="carousel-item">
             <div className="imagemcarousel">
-              <div className="d-block marcalogoseio alturaimg w-50">
+              <div className="marcalogoseio alturaimgrosa linkcarouselrosa w-50">
                 <p className="marcalogoseiotxt">
                   ENTRE PARA A FAMÍLIA ALENTE
                   <br />
@@ -68,7 +68,7 @@ const Carrossel = () => {
           </div>
           <div className="carousel-item">
             <div className="imagemcarousel">
-              <div className="d-block marcalogoseio w-100 alturaimg">
+              <div className=" marcalogoseio linkcarouselrosa w-100 alturaimgrosa">
                 <p className="marcalogoseio-title">Idealizadoras do projeto</p>
                 <div className="marcalogoseio-mari-renata">
                   <img src={mari} className="Mari" alt="Mari" />
@@ -102,22 +102,22 @@ const Carrossel = () => {
           </div>
         </div>
         <button
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleControls"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next"
+          className="carousel-control-next"
           type="button"
           data-bs-target="#carouselExampleControls"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
         </button>
       </div>
     </div>

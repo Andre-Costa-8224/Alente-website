@@ -35,8 +35,8 @@ const FaleConosco = (props) => {
         <section className="secaoform">
           <form ref={form} onSubmit={enviarEmail} className="formulario">
             <br />
-            <h1>Fale Conosco</h1>
-            <div className="form-floating">
+            <h1 style={{marginTop: "20px"}}>Fale Conosco</h1>
+            <div className="form-floating" style={{padding: "30px"}}>
               <div className="form-floating mb-3">
                 <input
                   type="text"
@@ -88,7 +88,7 @@ const FaleConosco = (props) => {
                 </Link>
               </div>
               <br />
-              <div>
+              <div style={{width: "100%", margin: "auto"}}>
                 <input
                   type="submit"
                   value="Enviar"

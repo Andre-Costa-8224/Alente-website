@@ -41,6 +41,10 @@
   margin-bottom: 25px;
 }
 
+.btn-brown:hover{
+  color: #B88C8D;
+}
+
 @media (max-width: 600px){
   .sobre article{
     max-width: 85vw;

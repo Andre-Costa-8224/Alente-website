@@ -6,6 +6,7 @@ PALETA DE CORES:
 2- #B58281 (footer)
 3- #F4EED8 (background amarelo esbranquiçado)
 */
+
 .altura{
   min-height: 50vh;
 }
@@ -13,6 +14,10 @@ PALETA DE CORES:
 .btntomrosaescuro{
   background-color: #A57576;
   color: white;
+}
+
+.btntomrosaescuro:hover{
+  color: #e2b9b9;
 }
 
 .backgroundamarelado{
@@ -27,4 +32,8 @@ PALETA DE CORES:
 
 .M05{
   color: #B88C8D;
+}
+
+a:hover{
+  color: #e2b9b9;
 }

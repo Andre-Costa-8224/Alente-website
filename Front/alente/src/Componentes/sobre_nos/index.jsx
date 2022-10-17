@@ -1,6 +1,9 @@
 import "./index.css";
 import { Link } from "react-router-dom";
 import seta from "../../Imagens/SetaIcon.png";
+import foguete from "../../Imagens/Missao.svg";
+import visao from "../../Imagens/Visao.svg";
+import valores from "../../Imagens/Valores.svg"
 
 const SobreNos = () => {
   //JavaScript aqui se precisar
@@ -11,7 +14,7 @@ const SobreNos = () => {
           <article>
             <h1 className="tituloart">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/1356/1356604.png"
+                src={foguete}
                 alt="foguete"
               />
               Missão
@@ -27,7 +30,7 @@ const SobreNos = () => {
           <article className="visao">
             <h1 className="tituloart">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/31/31624.png"
+                src={visao}
                 alt="olho"
               />
               Visão
@@ -42,7 +45,7 @@ const SobreNos = () => {
           <article>
             <h1 className="tituloart">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/1786/1786971.png"
+                src={valores}
                 alt="aperto de mãos"
               />
               Valores

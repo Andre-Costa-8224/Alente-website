@@ -8,7 +8,8 @@ img{
   padding: 15px;
   flex-wrap: wrap;
   background-color: lightyellow;
-  color: brown;
+  color: #AD6E6F;
+  font-weight: bold;
 }
 
 .secaosobrecima article{
@@ -27,6 +28,7 @@ img{
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #AD6E6F;
 }
 
 .secaosobrebaixo{
@@ -35,7 +37,7 @@ img{
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  color: brown;
+  color: #AD6E6F;
 }
 
 .ondetudocomecou{

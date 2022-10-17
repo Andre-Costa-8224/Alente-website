@@ -19,7 +19,7 @@
 #arttxt h1{
   width: 60%;
   font-size: x-large;
-  color: purple;
+  color: #A57576;
   text-align: justify;
   font-weight: bold;
   margin: 10% auto auto 4%;
@@ -40,8 +40,9 @@
 
 .artform h1{
   font-size: x-large;
-  background-color: pink;
+  background-color: #B88C8D;
   padding: 3%;
+  color: white;
 }
 
 #optselect{
@@ -49,6 +50,10 @@
 }
 
 .marginauto{
+  margin: auto;
+}
+
+#termseconds{
   margin: auto;
 }
 
