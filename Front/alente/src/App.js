@@ -29,7 +29,7 @@ const Private = ({Item}) => {
 const Logged = ({Item}) => {
 
   const signed = useAuth().signed
-  return signed < 0 ? <Item/> : <Carrossel/>
+  return signed > 0 ? <Carrossel/> : <Item/>
 
 }
 
