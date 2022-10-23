@@ -18,11 +18,11 @@
   width: 43vw;
   margin-left: 10px;
   margin-top: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   padding: 10px;
   box-shadow: 1px 1px 1px 1px #AD6E6F;
   border-radius: 7px;
-  margin-bottom: 10px;
-  margin-top: 10px;
   overflow: auto;
 }
 

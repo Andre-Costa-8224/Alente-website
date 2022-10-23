@@ -27,6 +27,7 @@ const FaleConosco = (props) => {
         console.log(error.text);
       });
       e.target.reset()
+      handleOpen()
   }
 
   return (
@@ -44,6 +45,7 @@ const FaleConosco = (props) => {
                   id="floatingName"
                   name="nome"
                   placeholder="your name"
+                  required
                 />
                 <label for="floatingName">Nome</label>
               </div>
@@ -55,6 +57,7 @@ const FaleConosco = (props) => {
                   id="floatingPhone"
                   name="telefone"
                   placeholder="your phone number"
+                  required
                 />
                 <label for="floatingPhone">Seu telefone</label>
               </div>
@@ -65,6 +68,7 @@ const FaleConosco = (props) => {
                   id="floatingEmail"
                   name="email"
                   placeholder="your email"
+                  required
                 />
                 <label for="floatingEmail">Seu email</label>
               </div>
@@ -73,6 +77,7 @@ const FaleConosco = (props) => {
                   className="txtarea"
                   rows="5"
                   name="mensagem"
+                  required
                   placeholder="A família alente precisa de mãos! conte-nos um pouco sobre como você pode agregar à nossa comunidade"
                 ></textarea>
               </div>
@@ -81,6 +86,7 @@ const FaleConosco = (props) => {
                   style={{ width: "100%" }}
                   type="checkbox"
                   className="inputtermoseconds"
+                  required
                 />
 
                 <Link to={"/termosecondicoes"} target="_blank">
@@ -93,7 +99,6 @@ const FaleConosco = (props) => {
                   type="submit"
                   value="Enviar"
                   className="btnenviar"
-                  onClick={() => handleOpen()}
                 />
               </div>
             </div>
