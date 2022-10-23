@@ -123,7 +123,7 @@
 }
 
 #renata{
-  margin-left: 8%;
+  margin: auto;
 }
 
 .imglogos{
@@ -139,6 +139,24 @@
 
 #seashells{
   width: 20%;
+}
+
+#marirenatacontainer{
+  width: 50vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.displaymr{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.displaymr img{
+  width: 12vw
 }
 
 /* MEDIA QUERY - CAROUSEL VERSÃO MOBILE*/
@@ -158,9 +176,5 @@
   
   .marcalogoseio p{
     font-size: 1.3rem;
-  }
-  #renata{
-    margin-left: 0;
-    margin-right: -5px;
   }
 }

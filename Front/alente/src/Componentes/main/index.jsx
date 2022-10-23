@@ -1,7 +1,7 @@
 import "./index.css";
 import { Link } from "react-router-dom";
-import mari from "../../Imagens/mari.jpg";
-import renata from "../../Imagens/renata.jpg";
+import mari from "../../Imagens/mari.svg";
+import renata from "../../Imagens/renata.svg";
 import seashells from "../../Imagens/logosasells.png";
 import descartex from "../../Imagens/logodescartex.png";
 import energia from "../../Imagens/logoenergiapopulardobrasil.png";
@@ -70,14 +70,21 @@ const Carrossel = () => {
             <div className="imagemcarousel">
               <div className=" marcalogoseio linkcarouselrosa w-100 alturaimgrosa">
                 <p className="marcalogoseio-title">Idealizadoras do projeto</p>
-                <div className="marcalogoseio-mari-renata">
-                  <img src={mari} id="imgmari" alt="Mari" />
-                  <img src={renata} alt="Renata" />
+                <div id="marirenatacontainer">
+                <div className="displaymr">
+
+                  <img src={mari} id="" alt="Mari" />
+                  <span id="">Mari</span>
+
                 </div>
-                <p className="marcalogoseio-mari-renata">
-                  <span id="marispan">Mari</span>
-                  <span id="renata">Renata</span>
-                </p>
+
+                <div className="displaymr">
+
+                  <img src={renata} alt="Renata" />
+                  <span id="">Renata</span>
+
+                </div>
+                  </div>
                 <p className="imglogostitle">Parceiros que confiam na gente</p>
                 <div className="imglogos">
                   <img src={seashells} id="seashells" alt="seashells" />
