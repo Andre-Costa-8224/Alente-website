@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import "./footer.css";
+import logo from '../../Imagens/logofooter.svg'
 
 const Rodape = () => {
   return (
     <div className="rodape altura">
       <div>
-        <img src="" />
+        <img src={logo} alt="logo instituto alente" style={{width: "100%", height: "15vh", marginBottom: "3vh"}} />
         <p>Informações de Contato</p>
         <p>Instituto Alente</p>
         <p>Telefone:(00)0000-0000</p>
