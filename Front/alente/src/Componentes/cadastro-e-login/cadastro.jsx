@@ -32,8 +32,7 @@ const Cadastro = () => {
   return (
     <main className="altura cadpage">
       <br />
-      <fieldset className="formcad">
-        <form onSubmit={handleCad}>
+        <form onSubmit={handleCad} className="formcad">
           <h1>Cadastre-se</h1>
           <div className="form-floating">
             <div className="form-floating mb-3">
@@ -121,14 +120,13 @@ const Cadastro = () => {
               </Link>
             </div>
             <br />
-            <div>
-              <button id="submit" style={{ color: "white" }} type="submit">
+            <div style={{width: "100%", marginLeft: "35%" }}>
+              <button id="submit" style={{ color: "white"}} type="submit">
                 Enviar
               </button>
             </div>
           </div>
         </form>
-      </fieldset>
       <section>
         <article style={{ color: "white", fontWeight: "bold" }}>
           <h1>JUNTE-SE A FAMÍLIA ALENTE!</h1>

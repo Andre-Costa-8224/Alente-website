@@ -39,10 +39,20 @@
   margin-top: 18px;
   text-decoration: none;
   margin-bottom: 25px;
+  min-width: 35vw;
 }
 
 .btn-brown:hover{
   color: #B88C8D;
+}
+
+#btncomseta{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#btncomseta img{
+  width: min-content;
 }
 
 @media (max-width: 600px){

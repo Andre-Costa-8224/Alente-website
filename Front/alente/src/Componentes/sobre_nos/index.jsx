@@ -1,6 +1,6 @@
 import "./index.css";
 import { Link } from "react-router-dom";
-import seta from "../../Imagens/SetaIcon.png";
+import seta from "../../Imagens/avancarseta.svg";
 import foguete from "../../Imagens/Missao.svg";
 import visao from "../../Imagens/Visao.svg";
 import valores from "../../Imagens/Valores.svg"
@@ -78,7 +78,7 @@ const SobreNos = () => {
               puerperias e afins. Com isso,
             </p>
             <Link className="linkhistoria" to="/historiadeinicio">
-              Saiba mais{" "}
+              <span>Saiba mais{" "}</span>
               <img
                 src={seta}
                 alt="seta"

@@ -69,7 +69,7 @@ const Transparencia = () => {
       <section id="graficos">
         <article id="selectebtn">
           <div>
-            <select id="filtro" name="">
+            <select style={{backgroundColor: "white", borderRadius: "2%"}} id="filtro" name="">
               <option value="">Filtre por ano</option>
               <option value="2022">2022</option>
             </select>

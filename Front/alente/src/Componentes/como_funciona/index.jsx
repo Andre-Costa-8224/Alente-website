@@ -1,5 +1,6 @@
 import "./index.css";
 import { Link } from "react-router-dom";
+import seta from '../../Imagens/seta.svg'
 
 const ComoFunciona = () => {
   //JavaScript aqui se precisar
@@ -41,8 +42,9 @@ const ComoFunciona = () => {
           </article>
         </section>
         <section className="sectbtn">
-          <Link to="/programas" className="btn-brown">
-            Conheça nossos programas
+          <Link id="btncomseta" to="/programas" className="btn-brown">
+            <span>Conheça nossos programas</span>
+            <img src={seta} alt="seta" />
           </Link>
         </section>
       </main>

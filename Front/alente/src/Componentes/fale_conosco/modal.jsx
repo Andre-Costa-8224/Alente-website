@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
 import "./index.css";
-import FaleConosco from "./index";
-import confete from "../../Imagens/confete.png";
+import confete from "../../Imagens/confete.svg";
 
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
