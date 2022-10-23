@@ -71,11 +71,11 @@ const Carrossel = () => {
               <div className=" marcalogoseio linkcarouselrosa w-100 alturaimgrosa">
                 <p className="marcalogoseio-title">Idealizadoras do projeto</p>
                 <div className="marcalogoseio-mari-renata">
-                  <img src={mari} className="Mari" alt="Mari" />
+                  <img src={mari} id="imgmari" alt="Mari" />
                   <img src={renata} alt="Renata" />
                 </div>
                 <p className="marcalogoseio-mari-renata">
-                  <span className="Mari">Mari</span>
+                  <span id="marispan">Mari</span>
                   <span id="renata">Renata</span>
                 </p>
                 <p className="imglogostitle">Parceiros que confiam na gente</p>
