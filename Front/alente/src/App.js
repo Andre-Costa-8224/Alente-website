@@ -33,6 +33,15 @@ const Logged = ({Item}) => {
 
 }
 
+const estilo = {
+  textAlign: "center",
+  margin: '20vh auto 20vh auto',
+  backgroundColor: '#F2CC0D',
+  padding: '3%'
+}
+
+const H1 = <h1 style={estilo}><span style={{backgroundColor: "#F2CC0D", padding: "8%", borderRadius: "50%"}}>Em breve!</span></h1>
+
 function App() {
 
   return (
@@ -41,9 +50,9 @@ function App() {
         <Cabecalho />
         <Routes>
           <Route path="/" exact element={<Carrossel />} />
-          <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/login" element={<Logged Item={Login} />} />
-          <Route path="/perfil" element={<Private Item={Perfil} />} />
+          <Route path="/cadastro" element={H1} />
+          <Route path="/login" element={ H1 /*<Logged Item={Login} />*/} />
+          <Route path="/perfil" element={ H1 /*<Private Item={Perfil} />*/} />
           <Route path="/comofunciona" element={<ComoFunciona />} />
           <Route path="/faleconosco" element={<FaleConosco />} />
           <Route path="/doacoes" element={<Doacoes />} />
@@ -54,7 +63,6 @@ function App() {
           <Route path="/programas" element={<Private  Item={Programas} />} />
           <Route path="/transparencia" element={<Transparencia />} />
           <Route path="/termosecondicoes" element={<TermsConds/>}/>
-          
         </Routes>
         <Rodape />
       </Router>
