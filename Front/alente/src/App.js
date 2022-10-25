@@ -60,7 +60,7 @@ function App() {
           <Route path="/historiadeinicio" element={<HistInicio />} />
           <Route path="/parceiros" element={<Parceiros />} />
           <Route path="/doeleite" element={<DoeLeite />} />
-          <Route path="/programas" element={<Private  Item={Programas} />} />
+          <Route path="/programas" element={ <Programas/> /*<Private  Item={Programas}*/ />} />
           <Route path="/transparencia" element={<Transparencia />} />
           <Route path="/termosecondicoes" element={<TermsConds/>}/>
         </Routes>
