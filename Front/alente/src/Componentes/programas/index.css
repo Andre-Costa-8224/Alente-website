@@ -8,6 +8,13 @@
     justify-content: center;
     align-items: center;
   }
+  #programas img{
+    width: 25vw;
+    margin-top: 3%;
+  }
+  #programas button{
+    margin-bottom: 3%;
+  }
 }
 
 .artigoprograma{
