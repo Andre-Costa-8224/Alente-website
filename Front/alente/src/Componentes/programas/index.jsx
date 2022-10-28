@@ -33,7 +33,7 @@ const Programas = () => {
 
   return (
     <>
-      <section>
+      <section id="programas">
         {titulos.map((item, value) => {
           return (
             <article

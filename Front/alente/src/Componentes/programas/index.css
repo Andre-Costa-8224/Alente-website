@@ -1,3 +1,14 @@
+@media (max-width: 600px){
+  #programas{
+    display: block;
+  }
+  #programas article{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .artigoprograma{
   display: flex;
@@ -6,6 +17,7 @@
 
 #txtdiv{
   width: 85%;
+  overflow: auto;
   color: #B58281;
 }
 
